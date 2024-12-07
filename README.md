@@ -2,7 +2,7 @@
 
 It's simply a tool to commit to GitHub.
 
-GitHubCommit is a simple command-line tool designed to facilitate committing changes to GitHub repositories. It streamlines the process by providing straightforward commands and automating common tasks associated with Git commits.
+GitHubCommit is a straightforward command-line utility aimed at simplifying the process of adding or updating a single file in a GitHub repository. It enhances efficiency by offering easy-to-use commands and automating routine tasks associated with Git commits.
 
 ## Requirements
 
