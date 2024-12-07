@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GitHubCommit": {
+      "commandName": "Project",
+      "commandLineArgs": "sampling.csv data/sampling.csv --repo MareMare/GHCommitSandbox"
+    }
+  }
+}
