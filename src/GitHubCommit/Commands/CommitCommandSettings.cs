@@ -16,7 +16,7 @@ namespace GitHubCommit.Commands;
 /// GitHubと対話し、ログインやリポジトリ内のファイルの作成・更新を行うコマンド設定を表します。
 /// </summary>
 [UsedImplicitly]
-public sealed class CommitCommandSettings : CommandSettings
+internal sealed class CommitCommandSettings : CommandSettings
 {
     /// <summary>
     /// コミットするローカルファイルのパスを取得または設定します。
@@ -28,7 +28,7 @@ public sealed class CommitCommandSettings : CommandSettings
     [CommandArgument(0, "<SourceFilePath>")]
     [Description("Specify the local path of the file to commit.")]
     [Required]
-    public string SourceFilePath { get; set; } = default!;
+    public string SourceFilePath { get; set; } = null!;
 
     /// <summary>
     /// リポジトリ内で作成または更新するファイルのパスを取得または設定します。
@@ -40,7 +40,7 @@ public sealed class CommitCommandSettings : CommandSettings
     [CommandArgument(1, "<TargetFilePath>")]
     [Description("Specify the path of the file to create or update in the repository.")]
     [Required]
-    public string TargetFilePath { get; set; } = default!;
+    public string TargetFilePath { get; set; } = null!;
 
     /// <summary>
     /// OWNER/REPOフォーマットを使用してリポジトリ名を取得または設定します。
@@ -52,7 +52,7 @@ public sealed class CommitCommandSettings : CommandSettings
     [CommandOption("--repo <OwnerRepo>")]
     [Description("Select another repository using the OWNER/REPO format.")]
     [DefaultValue("OWNER/REPO")]
-    public string OwnerRepo { get; set; } = default!;
+    public string OwnerRepo { get; set; } = null!;
 
     /// <summary>
     /// ファイルを作成または更新するブランチを取得または設定します。
@@ -76,5 +76,5 @@ public sealed class CommitCommandSettings : CommandSettings
     [CommandOption("--message <Message>")]
     [Description("Specify the commit message for the file creation or update.")]
     [Required]
-    public string Message { get; set; } = default!;
+    public string Message { get; set; } = null!;
 }
