@@ -6,13 +6,13 @@ GitHubCommit is a straightforward command-line utility aimed at simplifying the 
 
 ## Requirements
 
-- [.NET Desktop Runtime 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) is required to run this tool.
+- [.NET Desktop Runtime 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) is required to run this tool.
 - Ensure that the environment variable `GH_TOKEN` is set. This token is required for authenticating with GitHub to commit changes.
 
 ## Installation
 
 1. Download the latest release from the [GitHub releases page](https://github.com/MareMare/GitHubCommit/releases).
-2. Ensure that [.NET Desktop Runtime 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) is installed on your machine.
+2. Ensure that [.NET Desktop Runtime 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) is installed on your machine.
 3. Extract the downloaded files to your preferred directory.
 
 ## Usage
