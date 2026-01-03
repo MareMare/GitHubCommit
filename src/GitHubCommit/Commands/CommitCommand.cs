@@ -14,7 +14,7 @@ namespace GitHubCommit.Commands;
 /// GitHubと対話し、ログインやリポジトリ内のファイルの作成・更新を行うコマンドを表します。
 /// </summary>
 /// <param name="service"><see cref="IGitHubClientService" />。</param>
-public sealed class CommitCommand(IGitHubClientService service) : AsyncCommand<CommitCommandSettings>
+internal sealed class CommitCommand(IGitHubClientService service) : AsyncCommand<CommitCommandSettings>
 {
     /// <inheritdoc />
     public override async Task<int> ExecuteAsync(CommandContext context, CommitCommandSettings settings, CancellationToken cancellationToken)
@@ -39,7 +39,7 @@ public sealed class CommitCommand(IGitHubClientService service) : AsyncCommand<C
 
         static (string Owner, string Repo) SplitOwnerRepo(string ownerRepo)
         {
-            var elements = ownerRepo.Split("/", StringSplitOptions.None);
+            var elements = ownerRepo.Split("/");
             return elements.Length == 2 ? (elements[0], elements[1]) : (string.Empty, string.Empty);
         }
     }

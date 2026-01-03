@@ -10,7 +10,7 @@ namespace GitHubCommit.Services;
 /// <summary>
 /// GitHubと対話し、ログインやリポジトリ内のファイルの作成・更新を行うインターフェイスを表します。
 /// </summary>
-public interface IGitHubClientService
+internal interface IGitHubClientService
 {
     /// <summary>
     /// パーソナルアクセストークンを使用してGitHubにログインします。
