@@ -17,7 +17,7 @@ namespace GitHubCommit.Commands;
 internal sealed class CommitCommand(IGitHubClientService service) : AsyncCommand<CommitCommandSettings>
 {
     /// <inheritdoc />
-    public override async Task<int> ExecuteAsync(CommandContext context, CommitCommandSettings settings, CancellationToken cancellationToken)
+    protected override async Task<int> ExecuteAsync(CommandContext context, CommitCommandSettings settings, CancellationToken cancellationToken)
     {
         ArgumentNullException.ThrowIfNull(settings);
 
